@@ -22,12 +22,12 @@ Route::group(
         'namespace' => 'Dashboard',
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
-   // Route::post('/forget', 'Auth\ResetController@SendEmail')->name('post.forget');
-   // Route::post('/reset', 'Auth\ResetController@resetPassword')->name('post.reset');
-   // Route::get('/login', 'Auth\LoginController@index')->name('index.login');
-   // Route::get('/reset/{token}', 'Auth\ResetController@resetPasswordView');
-   // Route::post('/login', 'Auth\LoginController@login')->name('post.login');
-   // Route::post('/logout', 'Auth\LoginController@logout')->name('post.logout');
+    Route::post('/forget', 'Auth\ResetController@SendEmail')->name('post.forget');
+    Route::post('/reset', 'Auth\ResetController@resetPassword')->name('post.reset');
+    Route::get('/login', 'Auth\LoginController@index')->name('index.login');
+    Route::get('/reset/{token}', 'Auth\ResetController@resetPasswordView');
+    Route::post('/login', 'Auth\LoginController@login')->name('post.login');
+    Route::post('/logout', 'Auth\LoginController@logout')->name('post.logout');
 
     // Dashboard Content Middleware
 
